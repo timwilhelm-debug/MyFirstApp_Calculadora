@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+    <!-- Screen Display -->
+    <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#EEEEEE"
+            android:gravity="end"
+            android:padding="24dp"
+            android:text="0"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Degree / Radian Toggle -->
+    <Switch
+            android:id="@+id/switchAngle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Degrees (Off = Radians)"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDisplay" />
+
+    <!-- ConstraintLayout Flow to easily build a Grid of buttons -->
+    <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowButtons"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:constraint_referenced_ids="btnSin,btnCos,btnTan,btnClear,btn7,btn8,btn9,btnDivide,btn4,btn5,btn6,btnMultiply,btn1,btn2,btn3,btnMinus,btn0,btnEquals,btnAdd"
+            app:flow_horizontalGap="8dp"
+            app:flow_maxElementsWrap="4"
+            app:flow_verticalGap="8dp"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switchAngle" />
+
+    <!-- Buttons -->
+    <Button android:id="@+id/btnSin" android:layout_width="0dp" android:layout_height="0dp" android:text="Sin" />
+    <Button android:id="@+id/btnCos" android:layout_width="0dp" android:layout_height="0dp" android:text="Cos" />
+    <Button android:id="@+id/btnTan" android:layout_width="0dp" android:layout_height="0dp" android:text="Tan" />
+    <Button android:id="@+id/btnClear" android:layout_width="0dp" android:layout_height="0dp" android:text="C" app:backgroundTint="#F44336" />
+
+    <Button android:id="@+id/btn7" android:layout_width="0dp" android:layout_height="0dp" android:text="7" />
+    <Button android:id="@+id/btn8" android:layout_width="0dp" android:layout_height="0dp" android:text="8" />
+    <Button android:id="@+id/btn9" android:layout_width="0dp" android:layout_height="0dp" android:text="9" />
+    <Button android:id="@+id/btnDivide" android:layout_width="0dp" android:layout_height="0dp" android:text="/" />
+
+    <Button android:id="@+id/btn4" android:layout_width="0dp" android:layout_height="0dp" android:text="4" />
+    <Button android:id="@+id/btn5" android:layout_width="0dp" android:layout_height="0dp" android:text="5" />
+    <Button android:id="@+id/btn6" android:layout_width="0dp" android:layout_height="0dp" android:text="6" />
+    <Button android:id="@+id/btnMultiply" android:layout_width="0dp" android:layout_height="0dp" android:text="*" />
+
+    <Button android:id="@+id/btn1" android:layout_width="0dp" android:layout_height="0dp" android:text="1" />
+    <Button android:id="@+id/btn2" android:layout_width="0dp" android:layout_height="0dp" android:text="2" />
+    <Button android:id="@+id/btn3" android:layout_width="0dp" android:layout_height="0dp" android:text="3" />
+    <Button android:id="@+id/btnMinus" android:layout_width="0dp" android:layout_height="0dp" android:text="-" />
+
+    <Button android:id="@+id/btn0" android:layout_width="0dp" android:layout_height="0dp" android:text="0" app:flow_horizontalSpan="2" />
+    <Button android:id="@+id/btnEquals" android:layout_width="0dp" android:layout_height="0dp" android:text="=" app:backgroundTint="#4CAF50" />
+    <Button android:id="@+id/btnAdd" android:layout_width="0dp" android:layout_height="0dp" android:text="+" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
